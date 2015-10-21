@@ -1,3 +1,0 @@
-# crimezoneScala
-Project S
-g
