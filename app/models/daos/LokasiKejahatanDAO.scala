@@ -10,5 +10,6 @@ import models.LokasiKejahatan.LokasiKejahatanT
 
 class LokasiKejahatanDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvider)
   extends GenericCRUD[LokasiKejahatanT, LokasiKejahatan] {
+
     override val table = TableQuery[LokasiKejahatanT]
   }

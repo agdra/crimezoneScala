@@ -14,6 +14,7 @@ abstract class GenericTable[T](tag: Tag, name: String) extends Table[T](tag, nam
 }
 
 trait GenericCRUD[C <: GenericTable[T], T] extends HasDatabaseConfig[JdbcProfile] {
+
   val dbConfig = DatabaseConfigProvider.get[JdbcProfile](Play.current)
 
   val table: TableQuery[C]

@@ -2,23 +2,23 @@ package models.services
 
 import javax.inject.Inject
 
-import models.LokasiKejahatan
+import models.{LokasiKejahatan,Tampung}
 import models.daos.LokasiKejahatanDAO
 import scala.concurrent.ExecutionContext.Implicits._
 import scala.concurrent.Future
 
-class LokasiKejahatanService @Inject()(lkDAO: LokasiKejahatanDAO) {
+class LokasiKejahatanService @Inject()(laporanKDAO: LokasiKejahatanDAO) {
 
   def list: Future[Seq[LokasiKejahatan]] = {
-    lkDAO.list
+    laporanKDAO.list
   }
 
   def findByID(id: Int): Future[Option[LokasiKejahatan]] = {
-    lkDAO.findByID(id)
+    laporanKDAO.findByID(id)
   }
 
   def add(lokasiK: LokasiKejahatan): Future[Option[LokasiKejahatan]] = {
-    lkDAO.insert(lokasiK).map { Int =>
+    laporanKDAO.insert(lokasiK).map { Int =>
       Option(lokasiK.copy(id = Option(Int)))
     }
   }
