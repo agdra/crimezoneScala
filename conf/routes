@@ -14,22 +14,23 @@ GET         /user/list/:id                          controllers.api.JsonUserCont
 DELETE      /user/delete/:id                        controllers.api.JsonUserControl.delete(id: Int)
 
 # MANAGE JENIS KEJAHATAN
-GET         /jeniskejahatan/list                    controllers.api.JsonJenisKejahatanControl.list
-GET         /jeniskejahatan/list/:id                controllers.api.JsonJenisKejahatanControl.findByID(id: Int)
+GET         /dashboard/jeniskejahatan/list          controllers.JenisKejahatanControl.list
+GET         /api/jenis/list                         controllers.api.JsonJenisKejahatanControl.list
+GET         /api/jenis/list/:id                     controllers.api.JsonJenisKejahatanControl.findByID(id: Int)
 
 
 # MANAGE LOKASI KEJAHATAN
-GET         /lokasikejahatan/list                   controllers.api.JsonLokasiKejahatanControl.list
-GET         /lokasikejahatan/list/:id               controllers.api.JsonLokasiKejahatanControl.findByID(id: Int)
+GET         /api/lokasi/list                        controllers.api.JsonLokasiKejahatanControl.list
+GET         /api/lokasi/list/:id                    controllers.api.JsonLokasiKejahatanControl.findByID(id: Int)
 
 # MANAGE KEGIATAN POLRESTABES
-GET         /kegiatanpolrestabes/list               controllers.api.JsonKegiatanPolresControl.list
-GET         /kegiatanpolrestabes/list/:id           controllers.api.JsonKegiatanPolresControl.findByID(id: Int)
+GET         /api/kegiatan/list                      controllers.api.JsonKegiatanPolresControl.list
+GET         /api/kegiatan/list/:id                  controllers.api.JsonKegiatanPolresControl.findByID(id: Int)
 
 # Status Laporan
-GET         /statuslaporan/list                     controllers.api.JsonStatusLaporanControl.list
-GET         /statuslaporan/list/:id                 controllers.api.JsonStatusLaporanControl.findByID(id: Int)
-PUT         /statuslaporan/update                   controllers.api.JsonStatusLaporanControl.update
+GET         /api/status/list                        controllers.api.JsonStatusLaporanControl.list
+GET         /api/status/list/:id                    controllers.api.JsonStatusLaporanControl.findByID(id: Int)
+PUT         /api/status/update                      controllers.api.JsonStatusLaporanControl.update
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
