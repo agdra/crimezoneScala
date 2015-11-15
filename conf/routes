@@ -6,12 +6,12 @@
 GET     /                           controllers.Application.index
 
 # MANAGE USER
-POST        /user                                   controllers.api.JsonUserControl.login
-POST        /user/new                               controllers.api.JsonUserControl.add
-PUT         /user/update                            controllers.api.JsonUserControl.update
-GET         /user/list                              controllers.api.JsonUserControl.list
-GET         /user/list/:id                          controllers.api.JsonUserControl.findByID(id: Int)
-DELETE      /user/delete/:id                        controllers.api.JsonUserControl.delete(id: Int)
+POST        /api/user                                   controllers.api.JsonUserControl.login
+POST        /api/user/new                               controllers.api.JsonUserControl.add
+PUT         /api/user/update                            controllers.api.JsonUserControl.update
+GET         /api/user/list                              controllers.api.JsonUserControl.list
+GET         /api/user/list/:id                          controllers.api.JsonUserControl.findByID(id: Int)
+DELETE      /api/user/delete/:id                        controllers.api.JsonUserControl.delete(id: Int)
 
 # MANAGE JENIS KEJAHATAN
 GET         /dashboard/jeniskejahatan/list          controllers.JenisKejahatanControl.list
